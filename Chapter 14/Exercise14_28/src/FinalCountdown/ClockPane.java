@@ -94,13 +94,9 @@ public class ClockPane extends Pane {
   
   /* Set the current time for the clock */
   public void setCurrentTime() {
-    // Construct a calendar for the current date and time
-    Calendar calendar = new GregorianCalendar();
-
-    // Set current hour, minute and second
-    this.hour = calendar.get(Calendar.HOUR_OF_DAY);
-    this.minute = calendar.get(Calendar.MINUTE);
-    this.second = calendar.get(Calendar.SECOND);
+    // Construct a calendar for random time
+   this.hour = (int) (Math.random() * 12);
+   this.minute = (int) (Math.random() * 31);
     
     paintClock(); // Repaint the clock
   }
